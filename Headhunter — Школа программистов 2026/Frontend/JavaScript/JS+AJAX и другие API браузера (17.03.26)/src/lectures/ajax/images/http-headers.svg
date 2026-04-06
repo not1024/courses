@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="200" fill="none">
+    <rect width="820" height="200" fill="#ffffff"/>
+    <rect width="370" height="30" x="10" y="32" fill="#B9DAF2" rx="5" style="mix-blend-mode:darken"/>
+    <rect width="370" height="30" x="440" y="32" fill="#B9DAF2" rx="5" style="mix-blend-mode:darken"/>
+    <rect width="370" height="121" x="10" y="62" fill="#DCB9F2" rx="5" style="mix-blend-mode:darken"/>
+    <rect width="370" height="121" x="440" y="62" fill="#DCB9F2" rx="5" style="mix-blend-mode:darken"/>
+    <text fill="#000" font-family="monospace" font-size="18" letter-spacing="0em" style="white-space:pre">
+        <tspan x="16" y="53">POST http://site.com/buy HTTP/1.1</tspan>
+        <tspan x="16" y="83">User-Agent: Chrome/131.0.0.0</tspan>
+        <tspan x="16" y="113">Accept: */*</tspan>
+        <tspan x="16" y="143">Content-Type: application/json</tspan>
+        <tspan x="16" y="173">Authorization: Bearer 1234..7890</tspan>
+    </text>
+    <text fill="#000" font-family="monospace" font-size="18" letter-spacing="0em" style="white-space:pre">
+        <tspan x="446" y="53">HTTP/1.1 200 OK</tspan>
+        <tspan x="446" y="83">Server: Nginx</tspan>
+        <tspan x="446" y="113">Content-Length: 678</tspan>
+        <tspan x="446" y="143">Content-Type: text/html</tspan>
+        <tspan x="446" y="173">Cache-Control: no-cache</tspan>
+    </text>
+    <text fill="#000" font-family="monospace" font-size="12" letter-spacing="0em" style="white-space:pre">
+        <tspan x="160" y="22">Запрос</tspan>
+    </text>
+    <text fill="#000" font-family="monospace" font-size="12" letter-spacing="0em" style="white-space:pre">
+        <tspan x="590" y="22">Ответ</tspan>
+    </text>
+</svg>

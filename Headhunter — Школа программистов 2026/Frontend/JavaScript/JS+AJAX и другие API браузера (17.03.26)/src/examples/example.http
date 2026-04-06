@@ -1,0 +1,26 @@
+### GET Image
+GET https://httpbin.org/image HTTP/1.1
+Accept: image/jpeg
+
+### GET JSON
+GET https://httpbin.org/json HTTP/1.1
+
+### GET HTML
+GET https://httpbin.org/html HTTP/1.1
+
+
+### GET (Управление ответом с помощью заголовков)
+GET http://localhost:8000/data HTTP/1.1
+Accept: application/xml
+
+
+### GET request
+GET / HTTP/1.1
+host: example.com
+
+
+### POST request
+POST /post HTTP/1.1
+host: httpbin.org
+
+{"username": "ivan", "password": "123"}

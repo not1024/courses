@@ -1,0 +1,31 @@
+{
+  "title": "Headhunter — Школа программистов 2026",
+  "shortTitle": "HH Школа 2026",
+  "provider": "HeadHunter",
+  "year": "2026",
+  "language": "ru",
+  "description": "Интенсивная программа подготовки full-stack разработчиков от HeadHunter",
+  "sections": [
+    {
+      "folder": "Backend",
+      "title": "Backend",
+      "icon": "server",
+      "order": 1,
+      "description": "Java, базы данных, паттерны проектирования, веб-серверы"
+    },
+    {
+      "folder": "Frontend",
+      "title": "Frontend",
+      "icon": "layout",
+      "order": 2,
+      "description": "HTML/CSS, JavaScript, TypeScript, React"
+    },
+    {
+      "folder": "Общие",
+      "title": "Общие дисциплины",
+      "icon": "book-open",
+      "order": 3,
+      "description": "Git, Python, аналитика, безопасность"
+    }
+  ]
+}

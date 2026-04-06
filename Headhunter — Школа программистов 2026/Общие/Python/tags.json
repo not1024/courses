@@ -1,0 +1,22 @@
+{
+  "tags": ["python", "jupyter", "notebook"],
+  "displayTags": {
+    "python": "Python",
+    "jupyter": "Jupyter",
+    "notebook": "Notebook"
+  },
+  "items": {
+    "Python Core (26.03.26)": {
+      "tags": ["python", "core", "jupyter", "notebook", "project"],
+      "title": "Python Core",
+      "date": "2026-03-26",
+      "description": "Основы Python. Содержит PDF и Jupyter Notebook."
+    },
+    "Асинхронность на Python (31.03.26)": {
+      "tags": ["python", "async", "asyncio", "jupyter", "notebook", "project"],
+      "title": "Асинхронность на Python",
+      "date": "2026-03-31",
+      "description": "Асинхронное программирование в Python. Содержит PDF и Jupyter Notebook."
+    }
+  }
+}

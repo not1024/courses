@@ -1,0 +1,80 @@
+{
+  "title": "Учи.Дома — Python Pro 2023-2024",
+  "shortTitle": "Учи.Дома Python",
+  "provider": "Учи.Дома",
+  "year": "2023-2024",
+  "language": "ru",
+  "description": "Углублённый курс Python для продвинутых: ООП, Flask, SQL, алгоритмы, PyQT, автоматизация",
+  "sections": [
+    {
+      "folder": "API и Интеграции",
+      "title": "API и Интеграции",
+      "icon": "plug",
+      "order": 1,
+      "description": "Введение в API, Telegram API"
+    },
+    {
+      "folder": "Flask и Web-разработка",
+      "title": "Flask и Web-разработка",
+      "icon": "globe",
+      "order": 2,
+      "description": "Flask, маршрутизация, Jinja, формы, CRUD, хостинг"
+    },
+    {
+      "folder": "Git и GitHub",
+      "title": "Git и GitHub",
+      "icon": "git-branch",
+      "order": 3,
+      "description": "Система контроля версий"
+    },
+    {
+      "folder": "PyQT",
+      "title": "PyQT",
+      "icon": "monitor",
+      "order": 4,
+      "description": "Графический интерфейс, Qt Designer, работа с БД"
+    },
+    {
+      "folder": "SQL и Базы Данных",
+      "title": "SQL и Базы Данных",
+      "icon": "database",
+      "order": 5,
+      "description": "Создание таблиц, простые и сложные запросы"
+    },
+    {
+      "folder": "Алгоритмы и Структуры Данных",
+      "title": "Алгоритмы и Структуры Данных",
+      "icon": "binary",
+      "order": 6,
+      "description": "Структуры данных, поиск, сортировка, Big O"
+    },
+    {
+      "folder": "ООП",
+      "title": "ООП",
+      "icon": "boxes",
+      "order": 7,
+      "description": "Классы, наследование, полиморфизм, инкапсуляция"
+    },
+    {
+      "folder": "Работа с Данными и Файлами",
+      "title": "Работа с Данными и Файлами",
+      "icon": "file-json",
+      "order": 8,
+      "description": "Файлы, JSON, CSV"
+    },
+    {
+      "folder": "Утилиты и Автоматизация",
+      "title": "Утилиты и Автоматизация",
+      "icon": "wrench",
+      "order": 9,
+      "description": "CLI, Schedule, Regex, тестирование"
+    },
+    {
+      "folder": "Функциональное Программирование",
+      "title": "Функциональное Программирование",
+      "icon": "function-square",
+      "order": 10,
+      "description": "Функции, декораторы, функциональный подход"
+    }
+  ]
+}

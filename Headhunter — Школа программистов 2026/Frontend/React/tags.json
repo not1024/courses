@@ -1,0 +1,16 @@
+{
+  "tags": ["react", "frontend", "javascript"],
+  "displayTags": {
+    "react": "React",
+    "frontend": "Frontend",
+    "javascript": "JavaScript"
+  },
+  "items": {
+    "React — Часть 1 (02.04.26)": {
+      "tags": ["react", "project"],
+      "title": "React — Часть 1",
+      "date": "2026-04-02",
+      "description": "Лекция и demo-проект React. Содержит React.pdf и demo-react.zip."
+    }
+  }
+}

@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>HTML и CSS. Лекция 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+            --color-key: #d6001c;
+        }
+        .centered {
+            display: block;
+            margin: 20px auto;
+        }
+        .custom-slide-code::after {
+            opacity: 0;
+        }
+        .shower.list {
+            --slide-scale: 0.8
+        }
+    </style>
+
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>HTML и CSS</h1>
+        <p>Лекция</p>
+    </header>
+
+    <section class="slide">
+        <h2>Организационные моменты</h2>
+        <p><span class="custom-emoji">🔇</span> Отключите микрофоны</p>
+        <p><span class="custom-emoji">🔉</span> Не забывайте включать микрофон, когда задаете вопрос</p>
+        <p><span class="custom-emoji">🔉</span> Не стеснятйтесь задавать вопросы</p>
+        <p><span class="custom-emoji">😉</span> По возможности включайте камеры</p>
+    </section>
+
+    <section class="slide">
+        <h3>
+            Роман Дмитерко
+            <img src="pictures/hh.ru.svg" width="50" height="50" style="margin: 0px 0 0 20px;" />
+        </h3>
+        <ul>
+            <li>Фронтенд-разработчик в hh.ru</li>
+            <li>Занимаюсь web-разработкой с 2012 года</li>
+        </ul>
+        <img src="pictures/portfolio.png" width="60%" />
+    </section>
+
+    <section class="slide">
+        <h2>План</h2>
+        <ol class="custom-text-small">
+            <li class="next">
+                Лекция
+                <ul>
+                    <li class="next">HTML</li>
+                    <li class="next">
+                        СSS
+                        <ul>
+                            <li>CSS-свойства</li>
+                            <li>БЭМ</li>
+                            <li>Адаптивная верстка</li>
+                            <li>CSS-препроцессоры</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="next">Практика – часть 1</li>
+            <li class="next">Практика – часть 2</li>
+            <li class="next">Домашнее задание</li>
+        </ol>
+    </section>
+
+    <!-- HTML  ==========-->
+
+    <section class="slide">
+        <h2 class="shout">
+            HTML<br>
+            <span class="custom-subtitle custom-subtitle_white">(HyperText Markup Language)</span>
+        </h2>
+    </section>
+
+    <section class="slide grid">
+        <p><strong>Язык разметки</strong> документов, который определяет, какие элементы<br/  > должны располагаться на веб-странице и каким образом.</p>
+        <p>Был разработан Тимом Бернерсом-Ли приблизительно в 1986—1991 годах на основе SGML, а <a href="https://info.cern.ch/hypertext/WWW/TheProject.html">первая в истории страница</a> появилась в сети CERN</p></p>
+        <ul>
+            <li class="next">Простой в работе для тех, кто не ничего не понимает в верстке</li>
+            <li class="next">Одинаковое отображение на любом устройстве</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>World Wide Web</h2>
+        <img class="centered" src="pictures/WorldWideWeb.webp" alt="World Wide Web" width="60%" />
+    </section>
+
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-slug-hash="yLmgvme">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>HTML дескриптор (тег)</h2>
+        <img src="pictures/anatomy-html-element.png" alt="Анатомия HTML дескриптора" />
+    </section>
+
+    <section class="slide">
+        <h2>Атрибуты</h2>
+        <p>Позволяют изменять свойства и поведение элемента, <br>для которого они заданы</p>
+        <ul class="next">
+            <li>Обязательные</li>
+            <li>Необязательные</li>
+            <li>Пользовательские</li>
+        </ul>
+    </section>
+
+     <section class="slide custom-slide-code">
+         <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-slug-hash="ByBBKyN"
+             data-editable="true">
+         </div>
+     </section>
+
+    <section class="slide">
+        <h2>C чего начинается HTML-документ?</h2>
+        <h3>DOCTYPE</h3>
+        <p>Указывает версию спецификации HTML, которой соответствует документ. Сегодня он нужен только для того, чтобы браузер не переключался в режим совместимости.</p>
+        <p>Единственный актуальный doctype - <code>&#60;!DOCTYPE html&#62;</code></p>
+    </section>
+    <section class="slide">
+        <h2>Устаревшие DOCTYPE</h2>
+        <p style="font-size: 20px;"><code>&#60;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&#62;</code></p>
+        <br>
+        <p style="font-size: 20px;"><code>&#60;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&#62;</code></p>
+        <br>
+        <p style="font-size: 20px;"><code>&#60;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&#62;</code></p>
+    </section>
+    <section class="slide">
+        <h2>C чего начинается HTML-документ?</h2>
+        <p><b>&#60;html&#62;&#60;/html&#62;</b> - контейнер для всего документа. Имеет атрибут lang, который позволит браузеру понять как отображать контент</p>
+        <p><b>&#60;head&#62;&#60;/head&#62;</b> - метаданные страницы: заголовок, иконка, стили, скрипты, информация для шаринга</p>
+        <p><b>&#60;body&#62;&#60;/body&#62;</b> - содержит весь контент, который появится на странице: текст, изображения, теги.</p>
+    </section>
+
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="html"
+             data-slug-hash="RwRpQXV">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Инспектор HTML</h2>
+        <ul>
+            <li>Правой кнопкой ➡️ Inspect Element / Просмотреть код</li>
+            <li>Mac ➡️ <code>Cmd + Alt + I</code> или <code>F12</code></li>
+            <li>Windows, Ubuntu ➡️ <code>Ctrl + Shift + I</code> или <code>F12</code></li>
+        </ul>
+        <img src="pictures/inspector.png" width="100%" alt="inspector" />
+    </section>
+
+    <section class="slide">
+        <h2>Спецификация HTML</h2>
+        <ul>
+            <li>Спецификация HTML – <a href="https://html.spec.whatwg.org/multipage/" target="_blank">html.spec.whatwg.org</a></li>
+            <li>Список тегов – <a href="https://webref.ru/html" target="_blank">webref.ru</a>
+            <li>Моя любимая документация на русском языке – <a href="https://doka.guide/" target="_blank">doka.guide</a> </li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Схема работы браузера</h2>
+        <img class="next" src="pictures/DOM.png" width="100%" alt="Схема работы браузера" />
+    </section>
+
+    <section class="slide">
+        <h2>DOM <span class="custom-subtitle">(Document Object Model)</span></h2>
+        <img src="pictures/DOM_tree.png" width="100%" alt="DOM tree" />
+    </section>
+
+    <section class="slide">
+        <h2>Типы HTML-тегов</h2>
+        <ul>
+            <li>Строчные - располагаются на одной строке</li>
+            <li>Блочные - располагаются с новой строки</li>
+            <li>Строчно-блочные - располагаются на одной строке, но имеют поведение блочных</li>
+        </ul>
+        <p class="next">
+            <span style="color: red;">Нельзя вкладывать блочные теги в строчные. <br>
+                В строчно-блочные - можно</span>
+        </p>
+    </section>
+
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-slug-hash="jOrZLWm">
+        </div>
+    </section>
+
+
+   <section class="slide">
+       <h2>HTML теги по контенту</h2>
+       <ul class="next custom-text-small">
+           <li>Метаданные</li>
+           <li>Потоковое содержимое</li>
+           <li>Секционное содержимое</li>
+           <li>Заголовочное содержимое</li>
+           <li>Текстовое содержимое</li>
+           <li>Встроенное содержимое</li>
+           <li>Интерактивное содержимое</li>
+       </ul>
+       <a class="next" href="https://html5book.ru/kontentnaya-model-html5/">https://html5book.ru/kontentnaya-model-html5/</a>
+   </section>
+
+    <section class="slide">
+        <h2>Валидная верстка</h2>
+        <ul>
+            <li class="next">Документ имеет doctype</li>
+            <li class="next">Содержимое документа внутри тега html, контент внутри body</li>
+            <li class="next">Все закрывающиеся теги закрыты</li>
+            <li class="next">Теги имеют только допустимые атрибуты</li>
+        </ul>
+        <h3 class="next">Как проверить?</h3>
+        <ul>
+            <li class="next"><a href="https://validator.w3.org/">Онлайн-валидатор</a></li>
+            <li class="next">Плагин для редактора</li>
+        </ul>
+
+    </section>
+     <section class="slide">
+        <h2>Семантическая верстка - что это?</h2>
+        <p class="next">В общем случае - использование тегов по назначению: <br>для кнопки - <code>button</code>, для таблиц - <code>table</code>, заголовков - <code>h1-h6</code></p>
+        <h3 class="next">Зачем?</h3>
+        <ul>
+            <li class="next">Доступность для скринридеров. <a href="https://www.youtube.com/watch?v=gfqacN7C-cw&ab_channel=VKTeam">Видео о том, что это, и как пользуются</a></li>
+            <li class="next">Отображение при отключенных стилях и скриптах</li>
+            <li class="next">Поисковая оптимизация</li>
+            <li class="next">Удобство поддержки</li>
+        </ul>
+        <p class="next">Более подробно на <a href="https://doka.guide/html/semantics/">doka.guide</a></p>
+    </section>
+
+    <section class="slide">
+        <h2>Рекомендации по написанию HTML</h2>
+        <ul>
+            <li class="next">Старайтесь использовать теги по назначению</li>
+            <li class="next">Учитывайте доступность интерфейсов</li>
+            <li class="next">Проверяйте html валидаторами</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Что почитать 📚</h2>
+        <ul>
+            <li class="next"><a href="http://htmlbook.ru/html" target="_blank">Про теги на htmlbook.ru</a></li>
+            <li class="next"><a href="https://doka.guide/html//html-html5/" target="_blank">Про HTML</a></li>
+            <li class="next"><a href="https://doka.guide/a11y/">Про accessibility</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Вопросы ❔</h2>
+    </section>
+
+    <!-- CSS  ==========-->
+
+    <section class="slide">
+        <h2 class="shout">
+            CSS<br>
+            <span class="custom-subtitle custom-subtitle_white">(Cascading Style Sheets)    </span>
+        </h2>
+    </section>
+
+    <section class="slide">
+        <h2>CSS</h2>
+        <p>— появившийся в 1996 году, формат описания визуальных стилей, который позволяет применять визуальный стиль к элементам структурированных документов (например, документам HTML и XML)</p>
+        <h3>Почему "cascading"?</h3>
+        <p>Браузер загружает вcе стили, описанные на странице и применяет их "сверху-вниз", добавляя или заменяя свойства элемента</p>
+    </section>
+
+    <section class="slide">
+        <h2>Для чего?</h2>
+        <ul>
+            <li class="next">Идея была в том, что пользователь и разработчик<br> могут управлять отображением</li>
+            <li class="next">Понятный алгоритм определения стилей элементов - каскадность</li>
+            <li class="next">Возможности стилизации, которых нет в HTML</li>
+            <li class="next">Различная стилизация одного HTML-документа</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Разделение структуры и внешнего&nbsp;вида</h2>
+        <img class="place center" style="margin-top: 40px;" src="pictures/css_lego.png" alt="Разделение структуры и внешнего вида" width="500" />
+    </section>
+
+    <section class="slide">
+        <h2>Как это выглядит</h2>
+        <img src="pictures/css.png" alt="css" height="70%">
+    </section>
+
+    <section class="slide">
+        <h2>Синтаксис CSS-правила</h2>
+        <img src="pictures/css_rule.png" width="500" alt="Синтаксис CSS-правила" />
+    </section>
+
+    <section class="slide">
+        <h2>Как применить?</h2>
+        <ul>
+            <li class="next">Подключить внутри HTML<code>&#60;link rel="stylesheet" href="styles/main.css"&#62;</code></li>
+            <li class="next">Описание внутри тега <code>&#60;style&#62; .class {...} &#60;/style&#62;</code></li>
+            <li class="next">Применение инлайн-стилей <br><code>&#60;div style="width: 100px;" height=
+                "200px"&#62</code></li>
+        </ul>
+    </section>
+
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-slug-hash="wvVgNVb"
+             data-editable="true">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Схема работы браузера</h2>
+        <img class="next" src="pictures/render_tree_dom.png" alt="Render tree DOM" width="48%" />
+        <img class="next" src="pictures/render_tree_cssom.png" alt="Render tree CSSOM" width="48%" />
+        <img class="next" src="pictures/render_tree_all.png" alt="Render tree" width="100%" />
+    </section>
+
+    <section class="slide">
+        <h2>Типы селекторов</h2>
+        <ul class="next">
+            <li>Базовые селекторы</li>
+            <li>Псевдоклассы</li>
+            <li>Псевдоэлементы</li>
+            <li>Комбинаторы</li>
+        </ul>
+    </section>
+
+    <!-- Базовые селекторы -->
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="css,result"
+             data-slug-hash="JjKLdKj">
+        </div>
+    </section>
+
+    <!-- Псевдоклассы -->
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="css,result"
+             data-slug-hash="NWrMWWO">
+        </div>
+    </section>
+
+    <!-- Псевдоэлементы -->
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="css,result"
+             data-slug-hash="VwjxweW">
+        </div>
+    </section>
+
+    <!-- Комбинаторы -->
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="css,result"
+             data-slug-hash="QWErLoZ">
+        </div>
+    </section>
+
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+            data-height="490"
+            data-theme-id="dark"
+            data-default-tab="html,css,result"
+            data-slug-hash="bGXgybM"
+            data-editable="true">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Наследуемые стили:</h2>
+        <pre>color, font, letter-spacing, line-height, list-style, text-align, text-indent, text-transform, visibility, white-space и word-spacing</pre>
+    </section>
+    <section class="slide">
+        <h2>Ненаследуемые стили:</h2>
+        <pre>background, border, display, float и clear, height и width, margin, min-max-height и -width, outline, overflow, padding, position, text-decoration, vertical-align и z-index</pre>
+    </section>
+
+    <section class="slide">
+        <h2>Как применяются CSS-свойства</h2>
+        <ol>
+            <li class="next">Могут быть указаны в CSS для самого элемента</li>
+            <li class="next">Наследуются от родительского элемента</li>
+            <li class="next">Браузер устанавливает некоторые свойства по-умолчанию</li>
+            <li class="next">
+                К одному элементу могут применяться стили из разных мест и/или от разных селекторов
+                <ul>
+                    <li class="next">Учитывается специфичность селекторов</li>
+                    <li class="next">Стили, расположенные в коде ниже, переопределяют стили, расположенные выше</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-slug-hash="dyxNEOv"
+             data-editable="true">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Расчет специфичности селекторов</h2>
+        <table class="next">
+            <tr class="next">
+                <th>Селектор</th>
+                <th>Вес</th>
+            </tr>
+            <tr class="next">
+                <td>тег, псевдо-элемент(span, ::after)</td>
+                <td><code>0 0 0 1</code></td>
+            </tr>
+            <tr class="next">
+                <td>класс, псевдокласс, атрибут (.header, :hover)</td>
+                <td><code>0 0 1 0</code></td>
+            </tr>
+            <tr class="next">
+                <td>идентификатор (#footer)</td>
+                <td><code>0 1 0 0</code></td>
+            </tr>
+            <tr class="next">
+                <td>инлайн-стили (style="color: red;")</td>
+                <td><code>1 0 0 0</code></td>
+            </tr>
+        </table>
+        <a class="next" href="https://doka.guide/css/specificity/">Гайд по специфичности селекторов</a>
+        <br>
+        <a class="next" href="https://specificity.keegan.st/">Расчет специфичности</a>
+    </section>
+
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="html"
+             data-slug-hash="NWQdVYo"
+             data-editable="true">
+        </div>
+    </section>
+
+    <section class="slide custom-slide-code">
+        <h2>!important</h2>
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="html"
+             data-slug-hash="zYgNQJB"
+             data-editable="true">
+        </div>
+    </section>
+
+    <section class="slide">
+        <code>.text #name div.red.small { ... }</code>
+        <h2>А что плохого?</h2>
+        <img class="place right bottom" src="pictures/fry.png" width="500" alt="fry" />
+        <ul>
+            <li class="next">сложно читать</li>
+            <li class="next">сложно сранивать специфичность</li>
+            <li class="next">сложно увеличивать <br>и уменьшать специфичность</li>
+            <li class="next">усложняет поиск <br> селекторов браузерами</li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h2>Что же делать?</h2>
+        <p class="next">
+            Стараться использовать только селекторы классов
+            <br>
+            <code>.text #name div.red.small { ... }</code> -><br>
+            <code>.specific-element { ... }</code>
+        </p>
+        <p class="next">Проблема: сложно придумывать уникальные названия css-классов</p>
+    </section>
+
+    <section class="slide">
+        <img src="pictures/css-modules.svg" alt="css-modules" height="70%">
+    </section>
+
+    <section class="slide">
+        <h2>Работает в связке с JavaScript</h2>
+        <img src="pictures/css_modules_vzhuh.png" alt="" height="45%">
+        <br/><br/>
+        <p>
+            Статья на <a href="https://css-tricks.com/css-modules-part-1-need/">CSS Tricks</a>
+        </p>
+    </section>
+
+    <section class="slide">
+        <h2 class="next">Плюс</h2>
+        <ul>
+            <li class="next">Нет необходимости придумывать сложные названия классов</li>
+        </ul>
+        <h2 class="next">Минус</h2>
+        <ul>
+            <li class="next">Почти невозможно использовать без написания HTML внутри JavaScript</li>
+        </ul>
+    </section>
+
+    <!-- БЭМ =====================-->
+
+    <section class="slide">
+        <h2>БЭМ (Блок, Элемент, Модификатор) </h2>
+        <p class="note"></p>
+        <p>Компонентный подход к верстке. В его основе лежит принцип разделения интерфейса на независимые блоки</p>
+        <p><a href="https://ru.bem.info/methodology/" target="_blank">ru.bem.info</a></p>
+        <p><a href="https://ru.bem.info/methodology/key-concepts/" target="_blank">Основные понятия</a></p>
+    </section>
+
+    <section class="slide">
+        <img src="pictures/bem_block.png" width="100%" alt="Блок" />
+    </section>
+
+    <section class="slide">
+        <h2>Блок</h2>
+        <ul>
+            <li class="next">Функционально независимый компонент страницы</li>
+            <li class="next">
+                Название – английское слово или словосочетание<br>
+                <code>.header, .logo, .main-menu</code>
+            </li>
+            <li class="next">
+                Название характеризует смысл, а не состояние<br>
+                <code class="custom-code-bad">.red-text</code><br>
+                <code class="custom-code-good">.error</code>
+            </li>
+            <li class="next">Можно вкладывать друг в друга</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <img src="pictures/bem_element.png" width="100%" alt="Блок" />
+    </section>
+
+    <section class="slide">
+        <h2>Элемент</h2>
+        <ul>
+            <li class="next">Составная часть блока, которая не может использоваться без него</li>
+            <li class="next">
+                Название соответствует схеме<br>
+                <code>.имя-блока__имя-элемента</code>, например
+                <code>.main-menu__item</code>
+            </li>
+            <li class="next">Имя элемента характеризует смысл, а не состояние</li>
+            <li class="next">Элементы можно вкладывать друг в друга.</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <img src="pictures/bem_mod.png" width="100%" alt="Блок" />
+    </section>
+
+    <section class="slide">
+        <h2>Модификатор</h2>
+        <ul>
+            <li class="next">Определяет внешний вид, состояние или поведение блока или элемента</li>
+            <li class="next">
+                Название соответствует схеме<br>
+                <code>.имя-блока_имя-модификатора</code> или <br>
+                <code>.имя-блока__имя-элемента_имя-модификатора</code><br>
+                <code>.main-menu__item_active</code>
+            <li class="next">Имя модификатора характеризует внешний вид</li>
+            <li class="next">Нельзя использовать самостоятельно</li>
+        </ul>
+    </section>
+
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-slug-hash="dyxNBpK"
+             data-editable="true">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Преимущества</h2>
+        <ul>
+            <li class="next">Не повышается специфичность селекторов</li>
+            <li class="next">Блоки легко переиспользовать</li>
+            <li class="next">Легко масштабировать верстку</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Атомарный CSS</h2>
+        <p>Каждый css-класс меняет только одно свойство стилей</p>
+        <img src="pictures/atomic.png" alt="atomic" height="40%">
+        <p>Яркий пример - <a href="https://tailwindcss.com/">Tailwind CSS</a></p>
+    </section>
+
+    <section class="slide">
+        <h3 class="next">Плюсы</h3>
+        <ul class="next">
+            <li class="next">Подходит для тех, кто не хочет писать css</li>
+            <li class="next">Нет проблемы уникальности классов</li>
+        </ul>
+        <h3 class="next">Минусы</h3>
+        <ul class="next">
+            <li class="next">Названия классов не дают понимания, что это за блок</li>
+            <li class="next">Сложно поддерживать единство стилей</li>
+            <li class="next">Приходится собирать все правила для блока в голове</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Вопросы ❔</h2>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Перерыв ☕</h2>
+    </section>
+
+    <!-- ============= CSS ============= -->
+    <section class="slide">
+        <h2 class="shout">CSS свойства</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Блочная модель</h2>
+        <img src="pictures/block_model.png" width="80%" alt="box model" />
+    </section>
+
+    <section class="slide">
+        <h2>Свойства</h2>
+<pre><code>
+<span class="next">box-sizing: &#60;'border-box' || 'context-box'&#62;</span>
+<span class="next">border: &#60;ширина в px&#62; &#60;solid || dotted || dashed&#62; &#60;цвет&#62;</span>
+<span class="next">margin -top, -right, -bottom, -left: &#60;px || em || rem&#62;</span>
+<span class="next">padding -top, -right, -bottom, -left: &#60;px || em || rem&#62;</span>
+</code></pre>
+    </section>
+
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-editable="true"
+             data-slug-hash="NWQjMWG">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Поток документа</h2>
+        <div class="codepen"
+             data-height="350"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-slug-hash="JjRoeWL">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Position</h2>
+        <ul>
+            <li><code>static</code> - <em>по умолчанию</em></li>
+            <li><code>relative</code> - отступ от того места, где элемент должен быть отрисован</li>
+            <li><code>absolute</code> - позиция внутри ближайшего родителя с relative или absolute</li>
+            <li><code>fixed</code> - позиция внутри документа</li>
+            <li><code>sticky</code> - позиция, меняющаяся при скролле родителя</li>
+        </ul>
+    </section>
+
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-slug-hash="jENNrGQ"
+             data-editable="true">
+        </div>
+    </section>
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-slug-hash="MYggeER"
+             data-editable="true">
+        </div>
+    </section>
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-slug-hash="zxOOBPY"
+             data-editable="true">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Z-index</h2>
+        <img class="place center" src="pictures/zIndex.png" width="500" alt="Z-index" />
+    </section>
+
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+            data-height="490"
+            data-theme-id="dark"
+            data-default-tab="html,result"
+            data-slug-hash="gOMdZro">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Отображение элемента: display</h2>
+        <ul>
+            <li class="next"><code>none</code> - элемент не отображается</li>
+            <li class="next"><code>block</code> - блочный элемент</li>
+            <li class="next"><code>inline</code> - строчный(инлайн) элемент</li>
+            <li class="next"><code>inline-block</code> - блочно-строчный элемент</li>
+            <li class="next"><code>flex</code> - ?</li>
+            <li class="next"><code>grid</code> - ??</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Flexbox</h2>
+        <img src="pictures/flexbox-mode.jpg" width="700" alt="flexbox" />
+    </section>
+
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-slug-hash="zYBJyzv">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>flexbox</h2>
+        <div style="display: flex;">
+            <img src="pictures/flexboxfroggy.png" width="350" alt="flexboxfroggy" />
+            <div style="margin-left: 50px;">
+                <p>
+                    <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">A Complete Guide to Flexbox</a>
+                </p>
+                <p>
+                    <a href="https://flexboxfroggy.com/#ru" target="_blank">flexboxfroggy.com</a>
+                </p>
+                <p>
+                    <a href="https://doka.guide/css/flexbox-guide/" target="_blank">Все про flexbox на русском языке</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Grid</h2>
+        <p class="next">Похожи на flexbox, но работают с двумя осями сразу<br> и позволяют описать сетку</p>
+        <p class="next">Можно сравнить с таблицами</p>
+        <p class="next">
+            <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">A Complete Guide to Grid</a>
+        </p>
+        <p class="next">
+            <a href="https://doka.guide/css/grid-guide/" target="_blank">Все про грид на русском языке</a>
+        </p>
+
+
+    </section>
+    <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-slug-hash="ZEgKoPR"
+             data-editable="true">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Единицы измерения</h2>
+        <ul>
+            <li class="next">px - самый простая и понятная величина</li>
+            <li class="next">% - от размеров родительского элемента</li>
+            <li class="next">vh,vw - процент высоты или ширины вьюпорта (экрана)</li>
+            <li class="next">em - вычисляется относительно размера шрифта родительского элемента</li>
+            <li class="next">rem - вычисляется относительно размера шрифта корневого элемента (html)</li>
+        </ul>
+        <a class="next" href="https://doka.guide/css/numeric-types/">О других единицах измерения</a>
+    </section>
+    <section class="slide">
+        <h2>Анимации</h2>
+        <h4>Простые анимации</h4>
+        transition - плавное изменение свойства
+        <h4>Гибкие анимации</h4>
+        <ul>
+            <li>Описывают зависимость css-свойств от времени</li>
+            <li>Требуют больше памяти при рендеринге и могут быть посчитаны на GPU</li>
+        </ul>
+    </section>
+    <section class="slide">
+    <div class="codepen"
+            data-height="450"
+            data-theme-id="dark"
+            data-default-tab="html,result"
+            data-slug-hash="JjgNvpw"
+            data-editable="true">
+    </div>
+    </section>
+
+    <section class="slide">
+<pre><code style="font-size: 20px">
+@keyframes <название анимации> {
+    from {
+        /* css-свойства в первом кадре */
+        width: 50px;
+    }
+    to {
+        /* css-свойства в последнем кадре */
+        width: 200px;
+    }
+}
+</code></pre>
+    </section>
+    <section class="slide">
+<pre><code style="font-size: 20px">
+.circle {
+    animation-name: circle-to-square; // название анимации
+    animation-duration: 5s; // продолжительность
+    animation-iteration-count: infinite; // кол-во повторений
+    animation-timing-function: linear // функция скорости анимации
+}
+</code></pre>
+    <a href="https://doka.guide/css/animation/">Еще про свойства анимаций</a>
+    <br />
+    <a href="https://cubic-bezier.com/">Визуализация скорости анимации с помощью кривых Безье</a>
+    <br />
+    <a href="https://habr.com/ru/companies/odnoklassniki/articles/794160/">Отличная статья о выделении слоя анимации и рендеринге на GPU</a>
+     </section>
+
+     <section class="slide custom-slide-code">
+        <div class="codepen"
+             data-height="490"
+             data-theme-id="dark"
+             data-default-tab="html,result"
+             data-slug-hash="eYqWrWy"
+             data-editable="true">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Переменные</h2>
+        <div class="codepen"
+             data-height="400"
+             data-theme-id="dark"
+             data-default-tab="css,result"
+             data-slug-hash="abewNev"
+             data-editable="true">
+        </div>
+    </section>
+
+
+    <!-- Адаптивная верстка -->
+
+    <section class="slide">
+        <h2 class="shout">Адаптивная верстка</h2>
+    </section>
+
+    <section class="slide">
+        <div style="display: flex; justify-content: space-around;">
+            <img src="pictures/viewport_no2.png" height="450" alt="viewport-no" />
+            <img class="next" src="pictures/viewport_no.png" height="450" alt="viewport-no" />
+            <img class="next" src="pictures/viewport_yes.png" height="450" alt="viewport-yes" />
+        </div>
+    </section>
+
+    <section class="slide">
+        <img class="place center" src="pictures/adaptive.png" width="600" alt="Адаптивная верстка" />
+    </section>
+
+    <section class="slide">
+        <h2>Media queries (Медиа запросы)</h2>
+        <p>CSS правила, которые позволяют применять разные CSS-стили, для разных устройств по типу отображения (например: для принтера или монитора), или для конкретных характеристик устройства (например: ширины окна просмотра, ориентация устройства)</p>
+
+    </section>
+
+    <section class="slide">
+        <pre><code>@media screen and (max-width: 480px) {
+    .block {
+        background-color: #2196f3;
+        color: #fff;
+    }
+    ...
+}</code></pre>
+<a href="https://doka.guide/css/media/">Про разные виды медиа запросов</a>
+    </section>
+
+    <section class="slide">
+        <h2>Примеры адаптивной верстки</h2>
+        <div style="display: flex">
+            <span style="margin-left: 20px;"><a href="https://hh.ru" target="_blank">hh.ru</a></span>
+        </div>
+        <div style="display: flex"></div>
+            <span style="margin-left: 20px;"><a href="https://www.thetimes.com/" target="_blank">The Times</a></span>
+        </div>
+        <div style="display: flex"></div>
+            <span style="margin-left: 20px;"><a href="https://www.championat.com/" target="_blank">Чемпионат</a></span>
+        </div>
+        <div style="display: flex"></div>
+            <span style="margin-left: 20px;"><a href="https://www.dns-shop.ru/" target="_blank">DNS</a></span>
+        </div>
+        <div style="display: flex"></div>
+            <span style="margin-left: 20px;"><a href="https://habr.com/" target="_blank">Хабр</a></span>
+        </div>
+    </section>
+
+    <section class="slide">
+        <img class="cover" src="pictures/smartphones.jpg" alt="smartphones" />
+    </section>
+
+    <section class="slide">
+        <h2>Breakpoints</h2>
+        <img src="pictures/breakpoints.png" width="100%" alt="Breakpoints" />
+    </section>
+
+    <section class="slide">
+        <h2>CSS пиксель &ne; физический пиксель</h2>
+        <figure>
+            <img src="pictures/css_pixel_1.png" width="600" alt="css pixel">
+            <figcaption><a href="https://myresolutionis.ru/" target="_blank">myresolutionis.ru</a></figcaption>
+        </figure>
+    </section>
+
+    <section class="slide">
+        <h2>Реализация адаптивной верстки</h2>
+        <div style="display: flex">
+            <div>
+                <img src="pictures/adaptive-s.png" width="236" alt="adaptive-s" />
+            </div>
+            <div style="margin-left: 30px;">
+                <pre><code>.header {
+    ...
+}
+.promo-carousel {
+    ...
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Реализация аадаптивной верстки</h2>
+        <div style="display: flex">
+            <div>
+                <img src="pictures/adaptive-m.png" width="443" alt="adaptive-m" />
+            </div>
+            <div style="margin-left: 30px;">
+                <pre><code>@media (min-width: 480px){
+    .header {
+        ...
+    }
+    .promo-carousel {
+        ...
+    }
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Реализация адаптивной верстки</h2>
+        <img src="pictures/adaptive-l.png" width="616" alt="adaptive-l" />
+        <pre><code>@media (min-width: 1000px) { ... }</code></pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Препроцессоры <br/><span class="custom-subtitle custom-subtitle_white ">и постпроцессоры</span></h2>
+    </section>
+
+    <section class="slide">
+        <h2>Проблемы CSS</h2>
+        <ul>
+            <li class="next">Нет функций</li>
+            <li class="next">На CSS нельзя программировать. Например, писать циклы</li>
+            <li class="next">Использование переменных ограничено свойствами</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>CSS-препроцессор</h2>
+        <p>– это надстройка над CSS, которая добавляет новые возможности в синтаксис CSS и на выходе генерирует CSS код.
+        </p>
+        <h2>CSS-постпроцессор</h2>
+        <p>– функция, которая позволяет изменять CSS с помощью JavaScript на основе его синтаксического дерева и добавлять для этого пользовательские плагины
+        </p>
+    </section>
+
+    <section class="slide">
+        <h2>Как это работает</h2>
+        <div style="display: flex; align-items: center; justify-content: space-between; font-size: 50px; width: 80%;">
+            <img src="pictures/less.png" width="180"/>
+            ➡️
+            <img src="pictures/css.svg" width="180" />
+            ➡️
+            <img src="pictures/postcss.png" width="180" />
+            ➡️
+            <img src="pictures/css.svg" width="180" />
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>CSS-препроцессоры</h2>
+        <ul>
+            <li><a href="http://lesscss.org/" target="_blank">Less</a></li>
+            <li><a href="https://sass-lang.com/" target="_blank">Sass/SCSS</a></li>
+            <li><a href="https://stylus-lang.com/" target="_blank">Stylus</a></li>
+        </ul>
+        <h2>CSS-постпроцессор</h2>
+        <ul>
+        <li><a href="https://postcss.org/" target="_blank">PostCSS</a></li></ul>
+    </section>
+
+    <section class="slide">
+        <h2>Использование less</h2>
+        <ol>
+            <li class="next">
+                <code>&lt;link rel="stylesheet/less" type="text/css" href="styles.less" /&gt;</code><br>
+                <code>&lt;script src="//cdn.jsdelivr.net/npm/less" &gt;&lt;/script&gt;</code>
+            </li>
+            <li class="next">
+                <code>npm install -g less</code><br>
+                <code>lessc styles.less styles.css</code>
+            </li>
+            <li class="next">
+                настроить компиляцию less с помощью сборщиков: webpack, gulp, parcel или др.
+            </li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Вложенность селекторов</h2>
+        <div class="codepen"
+             data-height="350"
+             data-theme-id="dark"
+             data-default-tab="css"
+             data-slug-hash="ZEOqqOW">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Переменные</h2>
+        <div class="codepen"
+             data-height="350"
+             data-theme-id="dark"
+             data-default-tab="css"
+             data-slug-hash="NWrOOwK">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Миксины</h2>
+        <div class="codepen"
+             data-height="350"
+             data-theme-id="dark"
+             data-default-tab="css"
+             data-slug-hash="vYKVVjQ">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Другие возможности</h2>
+        <div class="codepen"
+             data-height="350"
+             data-theme-id="dark"
+             data-default-tab="css"
+             data-slug-hash="ExgaEgb">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Другие возможности</h2>
+        <ul>
+            <li>Условия</li>
+            <li>Циклы</li>
+            <li>Функции</li>
+        </ul>
+        <p><a href="http://lesscss.org/" target="_blank">lesscss.org</a></p>
+    </section>
+
+    <section class="slide">
+        <h2>Рекомендации по CSS</h2>
+        <ul>
+            <li class="next">Используйте селекторы по классу</li>
+            <li class="next">Именуйте классы по смыслу, а не по значению</li>
+            <li class="next">Не повышайте специфичность селекторов без надобности</li>
+            <li class="next">Старайтесь не использовать непонятные сокращения</li>
+            <li class="next">Учитывайте переполнение или отсутствие  контента</li>
+            <li class="next">Не перегружайте стили лишними свойствами и анимациями</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Вопросы ❔</h2>
+    </section>
+
+    <div class="progress"></div>
+    <script src="shower/shower.js"></script>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>

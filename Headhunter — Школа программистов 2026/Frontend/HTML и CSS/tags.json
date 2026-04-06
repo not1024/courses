@@ -1,0 +1,17 @@
+{
+  "tags": ["html", "css", "frontend", "presentation"],
+  "displayTags": {
+    "html": "HTML",
+    "css": "CSS",
+    "frontend": "Frontend",
+    "presentation": "Презентация"
+  },
+  "items": {
+    "HTML, CSS (12.02.26)": {
+      "tags": ["html", "css", "shower", "presentation", "project"],
+      "title": "HTML и CSS — Презентация Shower",
+      "date": "2026-02-12",
+      "description": "Интерактивная презентация на фреймворке Shower. Содержит index.html и index.pdf."
+    }
+  }
+}

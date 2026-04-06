@@ -1,0 +1,15 @@
+{
+  "tags": ["security", "backend", "owasp"],
+  "displayTags": {
+    "security": "Безопасность",
+    "backend": "Backend",
+    "owasp": "OWASP"
+  },
+  "items": {
+    "Безопасная разработка.pdf": {
+      "tags": ["security", "owasp", "secure-coding"],
+      "title": "Безопасная разработка",
+      "description": "Принципы безопасной разработки, уязвимости и их предотвращение"
+    }
+  }
+}

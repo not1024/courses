@@ -1,0 +1,22 @@
+{
+  "courses": [
+    {
+      "slug": "headhunter-2026",
+      "folder": "Headhunter — Школа программистов 2026",
+      "title": "Headhunter ��� Школа программистов 2026",
+      "description": "Программа обучения от HeadHunter: Backend (Java), Frontend (JS/React/TS), общие навыки",
+      "icon": "graduation-cap",
+      "color": "#d6001c",
+      "order": 1
+    },
+    {
+      "slug": "uchi-doma-python-2023",
+      "folder": "Учи.Дома — Python Pro 2023-2024",
+      "title": "Учи.Дома — Python Pro 2023-2024",
+      "description": "Углублённый курс Python: ООП, Flask, SQL, алгоритмы, PyQT",
+      "icon": "code",
+      "color": "#306998",
+      "order": 2
+    }
+  ]
+}

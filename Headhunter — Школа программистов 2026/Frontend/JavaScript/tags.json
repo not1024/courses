@@ -1,0 +1,18 @@
+{
+  "tags": ["javascript", "typescript", "react", "ajax", "frontend"],
+  "displayTags": {
+    "javascript": "JavaScript",
+    "typescript": "TypeScript",
+    "react": "React",
+    "ajax": "AJAX",
+    "frontend": "Frontend"
+  },
+  "items": {
+    "JS+AJAX и другие API браузера (17.03.26)": {
+      "tags": ["javascript", "ajax", "react", "typescript", "project"],
+      "title": "JS+AJAX и другие API браузера — Проект",
+      "date": "2026-03-17",
+      "description": "Учебный React/TypeScript проект с Express-сервером. Содержит исходный код лекции."
+    }
+  }
+}

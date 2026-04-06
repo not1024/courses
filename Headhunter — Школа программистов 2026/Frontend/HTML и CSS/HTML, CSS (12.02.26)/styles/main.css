@@ -1,0 +1,43 @@
+.todo {
+    color: orange;
+}
+
+.slide {
+    padding-top: 50px;
+}
+
+
+.custom-slide-code {
+    padding: 0;
+}
+
+.custom-slide-code h2 {
+    margin: 10px;
+}
+
+.custom-text-small {
+    font-size: 20px;
+}
+.custom-subtitle {
+    font-size: 50%;
+    color: #999;
+}
+.custom-subtitle_white {
+    color: #fff;
+}
+
+.custom-code-bad {
+    --color-back: #e33371;
+}
+
+.custom-code-good {
+    --color-back: #81c784;
+}
+
+.custom-emoji {
+    font-size: 40px;
+}
+
+.custom-emoji_large {
+    font-size: 100px;
+}

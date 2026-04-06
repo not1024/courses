@@ -1,0 +1,16 @@
+{
+  "tags": ["analytics", "testing", "ab-testing", "statistics"],
+  "displayTags": {
+    "analytics": "Аналитика",
+    "testing": "Тестирование",
+    "ab-testing": "A/B тесты",
+    "statistics": "Статистика"
+  },
+  "items": {
+    "AB-тесты.pdf": {
+      "tags": ["ab-testing", "analytics", "statistics"],
+      "title": "A/B тесты",
+      "description": "A/B тестирование в разработке"
+    }
+  }
+}
